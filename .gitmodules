@@ -1,0 +1,3 @@
+[submodule "dependencies/MHFoundation"]
+	path = dependencies/MHFoundation
+	url = https://github.com/malhal/MHFoundation.git
