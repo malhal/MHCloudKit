@@ -20,8 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable) CKDatabase *database;
 
-/* This block will be called once for every record that is returned as a result of the query. The callbacks will happen in the order that the results were sorted in. */
-@property (nonatomic, copy, nullable) void (^recordsFetchedBlock)(NSDictionary <CKRecordID *, CKRecord *> * __nullable recordsByRecordID);
+/* This block will be called once for every record batch that is returned as a result of the query. */
+@property (nonatomic, copy, nullable) void (^recordsFetchedBlock)(NSDictionary <CKRecordID *, CKRecord *> * recordsByRecordID);
 
 /*  This block is called when the operation completes.
  The [NSOperation completionBlock] will also be called if both are set. */
