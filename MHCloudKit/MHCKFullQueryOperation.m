@@ -42,7 +42,7 @@
     
     CKQueryOperation* queryOperation = [[CKQueryOperation alloc] initWithQuery:_query];
     
-    NSMutableDictionary* queriedRecordsByRecordID = [NSMutableDictionary dictionary];
+    __block NSMutableDictionary* queriedRecordsByRecordID = [NSMutableDictionary dictionary];
     //this block adds records to the result array
     void (^recordFetchedBlock)(CKRecord *record) = ^void(CKRecord *record) {
         queriedRecordsByRecordID[record.recordID] = record;
@@ -65,7 +65,8 @@
         [self _recordsFetched:queriedRecordsByRecordID];
         
         // prepare for the next batch
-        [queriedRecordsByRecordID removeAllObjects];
+        //[queriedRecordsByRecordID removeAllObjects];
+        queriedRecordsByRecordID = [NSMutableDictionary dictionary];
         
         if(cursor){
             //get the next batch.
