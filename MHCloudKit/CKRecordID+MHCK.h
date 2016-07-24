@@ -8,8 +8,12 @@
 
 #import <CloudKit/CloudKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface CKRecordID (MHCK)
 
 - (CKReference *)mhck_newReference;
 
 @end
+
+NS_ASSUME_NONNULL_END

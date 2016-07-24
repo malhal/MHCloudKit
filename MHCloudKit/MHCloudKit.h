@@ -21,6 +21,7 @@ FOUNDATION_EXPORT const unsigned char MHCloudKitVersionString[];
 
 #import <MHCloudKit/CKDatabase+MHCK.h>
 #import <MHCloudKit/CKDatabaseOperation+MHCK.h>
+#import <MHCloudKit/CKRecordID+MHCK.h>
 
 #import <MHCloudKit/MHCKFullQueryOperation.h>
 
