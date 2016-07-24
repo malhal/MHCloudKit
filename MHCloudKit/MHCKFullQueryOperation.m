@@ -55,6 +55,9 @@
     weakQueryCompletionBlock = queryCompletionBlock = ^void(CKQueryCursor * cursor, NSError * operationError) {
         void (^strongQueryCompletionBlock)() = weakQueryCompletionBlock;
         if(operationError){
+            if(operationError.code == CKErrorOperationCancelled){
+                return;
+            }
             [self finishWithError:operationError];
             return;
         }
