@@ -80,7 +80,7 @@
     };
     queryOperation.recordFetchedBlock = recordFetchedBlock;
     queryOperation.queryCompletionBlock = queryCompletionBlock;
-    queryOperation.database = self.database;
+    queryOperation.database = _database;
     [self addOperation:queryOperation];
 }
 
