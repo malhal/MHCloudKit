@@ -10,7 +10,7 @@
 
 @interface CKDatabaseOperation (MHCK)
 
-// by default operations use the private cloud database, this convenience defaults to public.
+// by default database operation subclasses use the private cloud database, this convenience uses the public.
 + (instancetype)mhck_publicOperation;
 
 @end

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CKRecordID (MHCK)
 
-- (CKReference *)mhck_newReference;
+- (CKReference *)mhck_reference;
 
 @end
 

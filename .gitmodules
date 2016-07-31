@@ -1,3 +1,6 @@
 [submodule "dependencies/MHFoundation"]
 	path = dependencies/MHFoundation
 	url = https://github.com/malhal/MHFoundation.git
+[submodule "dependencies/MHNamespaceGenerator"]
+	path = dependencies/MHNamespaceGenerator
+	url = https://github.com/malhal/MHNamespaceGenerator.git

@@ -10,7 +10,7 @@
 
 @implementation CKRecordID (MHCK)
 
-- (CKReference *)mhck_newReference{
+- (CKReference *)mhck_reference{
     return [[CKReference alloc] initWithRecordID:self action:CKReferenceActionNone];
 }
 
