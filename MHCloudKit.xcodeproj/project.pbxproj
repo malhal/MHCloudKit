@@ -11,6 +11,9 @@
 		EC07F1C31D4E53CE00A28610 /* MHFError.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F1C11D4E53CE00A28610 /* MHFError.h */; };
 		EC07F1C41D4E53CE00A28610 /* MHFError.m in Sources */ = {isa = PBXBuildFile; fileRef = EC07F1C21D4E53CE00A28610 /* MHFError.m */; };
 		EC07F1C61D4E541D00A28610 /* MHFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F1C51D4E541D00A28610 /* MHFDefines.h */; };
+		EC07F24E1D4FDAFB00A28610 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */; };
+		EC07F2521D4FDC3800A28610 /* MHCKQueryRecordsOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */; };
+		EC07F2531D4FDC3800A28610 /* MHCKQueryRecordsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */; };
 		ECD903201D442B8B00D0E427 /* CKDatabase+MHCK.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD9031A1D442B8B00D0E427 /* CKDatabase+MHCK.h */; };
 		ECD903211D442B8B00D0E427 /* CKDatabase+MHCK.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD9031B1D442B8B00D0E427 /* CKDatabase+MHCK.m */; };
 		ECD903221D442B8B00D0E427 /* CKDatabaseOperation+MHCK.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD9031C1D442B8B00D0E427 /* CKDatabaseOperation+MHCK.h */; };
@@ -47,6 +50,9 @@
 		EC07F1C11D4E53CE00A28610 /* MHFError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFError.h; path = dependencies/MHFoundation/MHFoundation/MHFError.h; sourceTree = "<group>"; };
 		EC07F1C21D4E53CE00A28610 /* MHFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHFError.m; path = dependencies/MHFoundation/MHFoundation/MHFError.m; sourceTree = "<group>"; };
 		EC07F1C51D4E541D00A28610 /* MHFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFDefines.h; path = dependencies/MHFoundation/MHFoundation/MHFDefines.h; sourceTree = "<group>"; };
+		EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCKQueryRecordsOperation.h; sourceTree = "<group>"; };
+		EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCKQueryRecordsOperation.m; sourceTree = "<group>"; };
 		ECD9031A1D442B8B00D0E427 /* CKDatabase+MHCK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKDatabase+MHCK.h"; sourceTree = "<group>"; };
 		ECD9031B1D442B8B00D0E427 /* CKDatabase+MHCK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKDatabase+MHCK.m"; sourceTree = "<group>"; };
 		ECD9031C1D442B8B00D0E427 /* CKDatabaseOperation+MHCK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKDatabaseOperation+MHCK.h"; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC07F24E1D4FDAFB00A28610 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +103,14 @@
 			);
 			name = MHNamespaceGenerator;
 			path = dependencies/MHNamespaceGenerator;
+			sourceTree = "<group>";
+		};
+		EC07F24F1D4FDB0400A28610 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		ECD903261D442C6800D0E427 /* dependencies */ = {
@@ -127,6 +142,7 @@
 				ECD903261D442C6800D0E427 /* dependencies */,
 				ECFD7F841D442AA900449373 /* MHCloudKit */,
 				ECFD7F901D442AA900449373 /* MHCloudKitTests */,
+				EC07F24F1D4FDB0400A28610 /* Frameworks */,
 				ECFD7F831D442AA900449373 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,6 +166,8 @@
 				ECD9031D1D442B8B00D0E427 /* CKDatabaseOperation+MHCK.m */,
 				ECD9031E1D442B8B00D0E427 /* MHCKFullQueryOperation.h */,
 				ECD9031F1D442B8B00D0E427 /* MHCKFullQueryOperation.m */,
+				EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */,
+				EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */,
 				ECFD7F871D442AA900449373 /* Info.plist */,
 				ECD903301D442E4F00D0E427 /* MHCKError.h */,
 				ECD903311D442E4F00D0E427 /* MHCKError.m */,
@@ -182,6 +200,7 @@
 				EC07F1C31D4E53CE00A28610 /* MHFError.h in Headers */,
 				EC07F1C01D4E52FD00A28610 /* MHCKDefines+Namespace.h in Headers */,
 				ECD9032C1D442C8200D0E427 /* MHFAsyncOperation.h in Headers */,
+				EC07F2521D4FDC3800A28610 /* MHCKQueryRecordsOperation.h in Headers */,
 				ECD903201D442B8B00D0E427 /* CKDatabase+MHCK.h in Headers */,
 				ECD903351D442F7E00D0E427 /* MHCKDefines.h in Headers */,
 				ECD9034A1D4524BA00D0E427 /* CKRecordID+MHCK.h in Headers */,
@@ -305,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC07F2531D4FDC3800A28610 /* MHCKQueryRecordsOperation.m in Sources */,
 				ECD9032D1D442C8200D0E427 /* MHFAsyncOperation.m in Sources */,
 				ECD9032F1D442C8200D0E427 /* MHFSerialQueueAsyncOperation.m in Sources */,
 				EC07F1C41D4E53CE00A28610 /* MHFError.m in Sources */,

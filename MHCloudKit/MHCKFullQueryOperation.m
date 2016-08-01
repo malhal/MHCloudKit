@@ -43,11 +43,11 @@
     CKQueryOperation* queryOperation = [[CKQueryOperation alloc] initWithQuery:_query];
     
     // a new dictionary will be used for every batch.
-    __block NSMutableDictionary* queriedRecordsByRecordID = [NSMutableDictionary dictionary];
+    __block NSMutableArray* queriedRecords = [NSMutableArray array];
     
     // this block adds records to the result array
     void (^recordFetchedBlock)(CKRecord *record) = ^void(CKRecord *record) {
-        queriedRecordsByRecordID[record.recordID] = record;
+        [queriedRecords addObject:record];
     };
     
     //this is used to allow the block to call itself recursively without causing a retain cycle.
@@ -64,10 +64,10 @@
             return;
         }
         
-        [self _recordsFetched:queriedRecordsByRecordID];
+        [self _recordsFetched:queriedRecords];
         
         // prepare for the next batch
-        queriedRecordsByRecordID = [NSMutableDictionary dictionary];
+        queriedRecords = [NSMutableArray array];
         
         if(cursor){
             //get the next batch.
@@ -91,11 +91,11 @@
     [super _finishOnCallbackQueueWithError:error];
 }
 
--(void)_recordsFetched:(NSDictionary*)recordsByRecordID{
+-(void)_recordsFetched:(NSArray*)records{
     // allow download to continue while records are being processed.
     [self performBlockOnCallbackQueue:^{
         if(_recordsFetchedBlock){
-            _recordsFetchedBlock(recordsByRecordID);
+            _recordsFetchedBlock(records);
         }
     }];
 }
