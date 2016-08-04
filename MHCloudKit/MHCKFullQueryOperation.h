@@ -8,11 +8,11 @@
 //  Does multiple query cursor operations to get all the records.
 
 #import <CloudKit/CloudKit.h>
-#import <MHFoundation/MHFSerialQueueAsyncOperation.h>
+#import <MHFoundation/MHFSerialQueueOperation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MHCKFullQueryOperation : MHFSerialQueueAsyncOperation
+@interface MHCKFullQueryOperation : MHFSerialQueueOperation
 
 - (instancetype)initWithQuery:(CKQuery *)query;
 

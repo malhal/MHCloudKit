@@ -7,11 +7,11 @@
 //
 
 #import <CloudKit/CloudKit.h>
-#import <MHFoundation/MHFSerialQueueAsyncOperation.h>
+#import <MHFoundation/MHFSerialQueueOperation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MHCKQueryRecordsOperation : MHFSerialQueueAsyncOperation
+@interface MHCKQueryRecordsOperation : MHFSerialQueueOperation
 
 - (instancetype)initWithRecordIDs:(NSArray <CKRecordID *> *)recordIDs;
 

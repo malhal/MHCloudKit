@@ -8,6 +8,7 @@
 
 #import "MHCKFullQueryOperation.h"
 #import "MHCKError.h"
+#import "MHFAsyncOperation_Private.h"
 
 @implementation MHCKFullQueryOperation
 
@@ -75,20 +76,20 @@
             cursorOperation.queryCompletionBlock = strongQueryCompletionBlock;
             cursorOperation.recordFetchedBlock = recordFetchedBlock;
             cursorOperation.database = _database;
-            [self addOperation:cursorOperation];
+            [self addSerialOperation:cursorOperation];
         }
     };
     queryOperation.recordFetchedBlock = recordFetchedBlock;
     queryOperation.queryCompletionBlock = queryCompletionBlock;
     queryOperation.database = _database;
-    [self addOperation:queryOperation];
+    [self addSerialOperation:queryOperation];
 }
 
-- (void)_finishOnCallbackQueueWithError:(NSError*)error{
+- (void)finishOnCallbackQueueWithError:(NSError*)error{
     if(_queryCompletionBlock){
         _queryCompletionBlock(error);
     }
-    [super _finishOnCallbackQueueWithError:error];
+    [super finishOnCallbackQueueWithError:error];
 }
 
 -(void)_recordsFetched:(NSArray*)records{
