@@ -17,7 +17,6 @@
 		ECA3721C1D52C89400B9DA1B /* MHFQueueOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */; };
 		ECA3721D1D52C89400B9DA1B /* MHFSerialQueueOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA372191D52C89400B9DA1B /* MHFSerialQueueOperation.h */; };
 		ECA3721E1D52C89400B9DA1B /* MHFSerialQueueOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA3721A1D52C89400B9DA1B /* MHFSerialQueueOperation.m */; };
-		ECA372201D52C8D300B9DA1B /* MHFAsyncOperation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA3721F1D52C8D300B9DA1B /* MHFAsyncOperation_Private.h */; };
 		ECA372221D52CC9600B9DA1B /* MHCKNamespaceDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA372211D52CC9600B9DA1B /* MHCKNamespaceDefines.h */; };
 		ECD903201D442B8B00D0E427 /* CKDatabase+MHCK.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD9031A1D442B8B00D0E427 /* CKDatabase+MHCK.h */; };
 		ECD903211D442B8B00D0E427 /* CKDatabase+MHCK.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD9031B1D442B8B00D0E427 /* CKDatabase+MHCK.m */; };
@@ -59,7 +58,6 @@
 		ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHFQueueOperation.m; path = dependencies/MHFoundation/MHFoundation/MHFQueueOperation.m; sourceTree = "<group>"; };
 		ECA372191D52C89400B9DA1B /* MHFSerialQueueOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFSerialQueueOperation.h; path = dependencies/MHFoundation/MHFoundation/MHFSerialQueueOperation.h; sourceTree = "<group>"; };
 		ECA3721A1D52C89400B9DA1B /* MHFSerialQueueOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHFSerialQueueOperation.m; path = dependencies/MHFoundation/MHFoundation/MHFSerialQueueOperation.m; sourceTree = "<group>"; };
-		ECA3721F1D52C8D300B9DA1B /* MHFAsyncOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFAsyncOperation_Private.h; path = dependencies/MHFoundation/MHFoundation/MHFAsyncOperation_Private.h; sourceTree = "<group>"; };
 		ECA372211D52CC9600B9DA1B /* MHCKNamespaceDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCKNamespaceDefines.h; sourceTree = "<group>"; };
 		ECD9031A1D442B8B00D0E427 /* CKDatabase+MHCK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CKDatabase+MHCK.h"; sourceTree = "<group>"; };
 		ECD9031B1D442B8B00D0E427 /* CKDatabase+MHCK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CKDatabase+MHCK.m"; sourceTree = "<group>"; };
@@ -135,9 +133,8 @@
 				EC07F1C11D4E53CE00A28610 /* MHFError.h */,
 				EC07F1C21D4E53CE00A28610 /* MHFError.m */,
 				ECD903281D442C8200D0E427 /* MHFAsyncOperation.h */,
-				ECA3721F1D52C8D300B9DA1B /* MHFAsyncOperation_Private.h */,
-				ECA372171D52C89400B9DA1B /* MHFQueueOperation.h */,
 				ECD903291D442C8200D0E427 /* MHFAsyncOperation.m */,
+				ECA372171D52C89400B9DA1B /* MHFQueueOperation.h */,
 				ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */,
 				ECA372191D52C89400B9DA1B /* MHFSerialQueueOperation.h */,
 				ECA3721A1D52C89400B9DA1B /* MHFSerialQueueOperation.m */,
@@ -206,7 +203,6 @@
 			files = (
 				ECD903321D442E4F00D0E427 /* MHCKError.h in Headers */,
 				ECD903221D442B8B00D0E427 /* CKDatabaseOperation+MHCK.h in Headers */,
-				ECA372201D52C8D300B9DA1B /* MHFAsyncOperation_Private.h in Headers */,
 				EC07F1C31D4E53CE00A28610 /* MHFError.h in Headers */,
 				ECD9032C1D442C8200D0E427 /* MHFAsyncOperation.h in Headers */,
 				ECA3721D1D52C89400B9DA1B /* MHFSerialQueueOperation.h in Headers */,

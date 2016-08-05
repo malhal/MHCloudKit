@@ -2,7 +2,7 @@
 //  MHCKNamespaceDefines.h
 //  MHCloudKit
 //
-//  Generated using MHNamespaceGenerator on 04/08/2016
+//  Generated using MHNamespaceGenerator on 05/08/2016
 //
 
 #if !defined(__MHCLOUDKIT_NS_SYMBOL) && defined(MHCLOUDKIT_NAMESPACE)

@@ -8,7 +8,6 @@
 
 #import "MHCKFullQueryOperation.h"
 #import "MHCKError.h"
-#import "MHFAsyncOperation_Private.h"
 
 @implementation MHCKFullQueryOperation
 
@@ -23,13 +22,13 @@
 
 -(BOOL)asyncOperationShouldRun:(NSError *__autoreleasing *)error{
     // todo check if these should be consistency exceptions.
-    if(!_query){
+    if(!self.query){
         *error = [NSError errorWithDomain:MHCloudKitErrorDomain code:CKErrorInvalidArguments userInfo:@{
                                                                                                 NSLocalizedDescriptionKey : @"a query must be provided for MHCKFullQueryOperation"
                                                                                                 }];
         return NO;
     }
-    if(!_database){
+    if(!self.database){
         *error = [NSError errorWithDomain:MHCloudKitErrorDomain code:CKErrorInvalidArguments userInfo:@{
                                                                                                 NSLocalizedDescriptionKey : @"a database must be provided for MHCKFullQueryOperation"
                                                                                                 }];
@@ -39,9 +38,7 @@
 }
 
 -(void)performAsyncOperation{
-    [super performAsyncOperation];
-    
-    CKQueryOperation* queryOperation = [[CKQueryOperation alloc] initWithQuery:_query];
+    CKQueryOperation* queryOperation = [[CKQueryOperation alloc] initWithQuery:self.query];
     
     // a new dictionary will be used for every batch.
     __block NSMutableArray* queriedRecords = [NSMutableArray array];
@@ -65,7 +62,7 @@
             return;
         }
         
-        [self _recordsFetched:queriedRecords];
+        [self recordsFetched:queriedRecords];
         
         // prepare for the next batch
         queriedRecords = [NSMutableArray array];
@@ -76,27 +73,30 @@
             cursorOperation.queryCompletionBlock = strongQueryCompletionBlock;
             cursorOperation.recordFetchedBlock = recordFetchedBlock;
             cursorOperation.database = _database;
-            [self addSerialOperation:cursorOperation];
+            [self addOperation:cursorOperation];
         }
     };
     queryOperation.recordFetchedBlock = recordFetchedBlock;
     queryOperation.queryCompletionBlock = queryCompletionBlock;
-    queryOperation.database = _database;
-    [self addSerialOperation:queryOperation];
+    queryOperation.database = self.database;
+    [self addOperation:queryOperation];
+    
+    // start the operation
+    [super performAsyncOperation];
 }
 
 - (void)finishOnCallbackQueueWithError:(NSError*)error{
-    if(_queryCompletionBlock){
-        _queryCompletionBlock(error);
+    if(self.queryCompletionBlock){
+        self.queryCompletionBlock(error);
     }
     [super finishOnCallbackQueueWithError:error];
 }
 
--(void)_recordsFetched:(NSArray*)records{
-    // allow download to continue while records are being processed.
+-(void)recordsFetched:(NSArray*)records{
+    // allow download to continue while records are being processed, according to CloudKit docs thats what we are supposed to do.
     [self performBlockOnCallbackQueue:^{
-        if(_recordsFetchedBlock){
-            _recordsFetchedBlock(records);
+        if(self.recordsFetchedBlock){
+            self.recordsFetchedBlock(records);
         }
     }];
 }
