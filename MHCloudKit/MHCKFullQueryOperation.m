@@ -72,7 +72,7 @@
             CKQueryOperation* cursorOperation = [[CKQueryOperation alloc] initWithCursor:cursor];
             cursorOperation.queryCompletionBlock = strongQueryCompletionBlock;
             cursorOperation.recordFetchedBlock = recordFetchedBlock;
-            cursorOperation.database = _database;
+            cursorOperation.database = self.database;
             [self addOperation:cursorOperation];
         }
     };

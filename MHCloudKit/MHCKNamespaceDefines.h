@@ -11,7 +11,7 @@
     #define __MHCLOUDKIT_NS_SYMBOL(symbol) __MHCLOUDKIT_NS_BRIDGE(MHCLOUDKIT_NAMESPACE, symbol)
 // Classes
     #define MHCKFullQueryOperation __MHCLOUDKIT_NS_SYMBOL(MHCKFullQueryOperation)
-    #define MHCKQueryRecordsOperation __MHCLOUDKIT_NS_SYMBOL(MHCKQueryRecordsOperation)
+    #define MHCKInQueryOperation __MHCLOUDKIT_NS_SYMBOL(MHCKInQueryOperation)
 // Categories
     #define mhck_performCursoredQuery __MHCLOUDKIT_NS_SYMBOL(mhck_performCursoredQuery)
     #define mhck_publicOperation __MHCLOUDKIT_NS_SYMBOL(mhck_publicOperation)

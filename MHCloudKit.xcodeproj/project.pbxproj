@@ -11,8 +11,8 @@
 		EC07F1C41D4E53CE00A28610 /* MHFError.m in Sources */ = {isa = PBXBuildFile; fileRef = EC07F1C21D4E53CE00A28610 /* MHFError.m */; };
 		EC07F1C61D4E541D00A28610 /* MHFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F1C51D4E541D00A28610 /* MHFDefines.h */; };
 		EC07F24E1D4FDAFB00A28610 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */; };
-		EC07F2521D4FDC3800A28610 /* MHCKQueryRecordsOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */; };
-		EC07F2531D4FDC3800A28610 /* MHCKQueryRecordsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */; };
+		EC07F2521D4FDC3800A28610 /* MHCKInQueryOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F2501D4FDC3800A28610 /* MHCKInQueryOperation.h */; };
+		EC07F2531D4FDC3800A28610 /* MHCKInQueryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC07F2511D4FDC3800A28610 /* MHCKInQueryOperation.m */; };
 		EC92EFDA1D564C47000DB848 /* MHFNamespaceDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EC92EFD91D564C47000DB848 /* MHFNamespaceDefines.h */; };
 		ECA3721B1D52C89400B9DA1B /* MHFQueueOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA372171D52C89400B9DA1B /* MHFQueueOperation.h */; };
 		ECA3721C1D52C89400B9DA1B /* MHFQueueOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */; };
@@ -53,8 +53,8 @@
 		EC07F1C21D4E53CE00A28610 /* MHFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHFError.m; path = dependencies/MHFoundation/MHFoundation/MHFError.m; sourceTree = "<group>"; };
 		EC07F1C51D4E541D00A28610 /* MHFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFDefines.h; path = dependencies/MHFoundation/MHFoundation/MHFDefines.h; sourceTree = "<group>"; };
 		EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCKQueryRecordsOperation.h; sourceTree = "<group>"; };
-		EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCKQueryRecordsOperation.m; sourceTree = "<group>"; };
+		EC07F2501D4FDC3800A28610 /* MHCKInQueryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCKInQueryOperation.h; sourceTree = "<group>"; };
+		EC07F2511D4FDC3800A28610 /* MHCKInQueryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCKInQueryOperation.m; sourceTree = "<group>"; };
 		EC92EFD91D564C47000DB848 /* MHFNamespaceDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFNamespaceDefines.h; path = dependencies/MHFoundation/MHFoundation/MHFNamespaceDefines.h; sourceTree = "<group>"; };
 		ECA372171D52C89400B9DA1B /* MHFQueueOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFQueueOperation.h; path = dependencies/MHFoundation/MHFoundation/MHFQueueOperation.h; sourceTree = "<group>"; };
 		ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHFQueueOperation.m; path = dependencies/MHFoundation/MHFoundation/MHFQueueOperation.m; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 				ECD9031D1D442B8B00D0E427 /* CKDatabaseOperation+MHCK.m */,
 				ECD9031E1D442B8B00D0E427 /* MHCKFullQueryOperation.h */,
 				ECD9031F1D442B8B00D0E427 /* MHCKFullQueryOperation.m */,
-				EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */,
-				EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */,
+				EC07F2501D4FDC3800A28610 /* MHCKInQueryOperation.h */,
+				EC07F2511D4FDC3800A28610 /* MHCKInQueryOperation.m */,
 				ECFD7F871D442AA900449373 /* Info.plist */,
 				ECD903481D4524BA00D0E427 /* CKRecordID+MHCK.h */,
 				ECD903491D4524BA00D0E427 /* CKRecordID+MHCK.m */,
@@ -210,7 +210,7 @@
 				EC92EFDA1D564C47000DB848 /* MHFNamespaceDefines.h in Headers */,
 				ECD9032C1D442C8200D0E427 /* MHFAsyncOperation.h in Headers */,
 				ECA3721D1D52C89400B9DA1B /* MHFSerialQueueOperation.h in Headers */,
-				EC07F2521D4FDC3800A28610 /* MHCKQueryRecordsOperation.h in Headers */,
+				EC07F2521D4FDC3800A28610 /* MHCKInQueryOperation.h in Headers */,
 				ECD903201D442B8B00D0E427 /* CKDatabase+MHCK.h in Headers */,
 				ECD903351D442F7E00D0E427 /* MHCKDefines.h in Headers */,
 				ECA372221D52CC9600B9DA1B /* MHCKNamespaceDefines.h in Headers */,
@@ -335,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC07F2531D4FDC3800A28610 /* MHCKQueryRecordsOperation.m in Sources */,
+				EC07F2531D4FDC3800A28610 /* MHCKInQueryOperation.m in Sources */,
 				ECD9032D1D442C8200D0E427 /* MHFAsyncOperation.m in Sources */,
 				ECA3721C1D52C89400B9DA1B /* MHFQueueOperation.m in Sources */,
 				EC07F1C41D4E53CE00A28610 /* MHFError.m in Sources */,

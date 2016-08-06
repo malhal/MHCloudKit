@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) CKDatabase *database;
 
 /* This block will be called once for every record batch that is returned as a result of the query. */
-@property (nonatomic, copy, nullable) void (^recordsFetchedBlock)(NSArray <CKRecord *> * records);
+@property (nonatomic, copy, nullable) void (^recordsFetchedBlock)(NSArray <CKRecord *> *records);
 
 /*  This block is called when the operation completes.
  The [NSOperation completionBlock] will also be called if both are set. */
