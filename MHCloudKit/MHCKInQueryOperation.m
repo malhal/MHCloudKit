@@ -8,6 +8,8 @@
 
 #import "MHCKInQueryOperation.h"
 #import "MHCKFullQueryOperation.h"
+#import "MHCKError.h"
+#import "NSError+MHF.h"
 
 #define MAX_VALUES_TO_QUERY 100
 
@@ -21,6 +23,19 @@
         _values = values.copy;
     }
     return self;
+}
+
+-(BOOL)asyncOperationShouldRun:(NSError *__autoreleasing *)error{
+    // todo check if these should be consistency exceptions.
+    if(!self.recordType){
+        *error = [NSError mhf_errorWithDomain:MHCloudKitErrorDomain code:CKErrorInvalidArguments descriptionFormat:@"a recordType must be provided for %@", NSStringFromClass(self.class)];
+        return NO;
+    }
+    else if(!self.database){
+        *error = [NSError mhf_errorWithDomain:MHCloudKitErrorDomain code:MHCKErrorInvalidArguments descriptionFormat:@"a database must be provided for %@", NSStringFromClass(self.class)];
+        return NO;
+    }
+    return [super asyncOperationShouldRun:error];
 }
 
 -(void)performAsyncOperation{
