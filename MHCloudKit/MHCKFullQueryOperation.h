@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MHCKFullQueryOperation : MHFSerialQueueOperation
 
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithQuery:(CKQuery *)query;
 
 @property (nonatomic, copy, nullable) CKQuery *query;
