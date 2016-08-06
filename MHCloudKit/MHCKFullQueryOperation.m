@@ -9,6 +9,7 @@
 #import "MHCKFullQueryOperation.h"
 #import "MHCKError.h"
 #import "NSError+MHF.h"
+#import "MHFError.h"
 
 @implementation MHCKFullQueryOperation
 
@@ -24,11 +25,11 @@
 -(BOOL)asyncOperationShouldRun:(NSError *__autoreleasing *)error{
     // todo check if these should be consistency exceptions.
     if(!self.query){
-        *error = [NSError mhf_errorWithDomain:CKErrorDomain code:CKErrorInvalidArguments descriptionFormat:@"a query must be provided for %@", NSStringFromClass(self.class)];
+        *error = [NSError mhf_errorWithDomain:MHCloudKitErrorDomain code:MHCKErrorInvalidArguments descriptionFormat:@"a query must be provided for %@", NSStringFromClass(self.class)];
         return NO;
     }
     else if(!self.database){
-        *error = [NSError mhf_errorWithDomain:CKErrorDomain code:CKErrorInvalidArguments descriptionFormat:@"a database must be provided for %@", NSStringFromClass(self.class)];
+        *error = [NSError mhf_errorWithDomain:MHCloudKitErrorDomain code:MHCKErrorInvalidArguments descriptionFormat:@"a database must be provided for %@", NSStringFromClass(self.class)];
         return NO;
     }
     return [super asyncOperationShouldRun:error];

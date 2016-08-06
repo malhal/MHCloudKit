@@ -13,4 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 MHCLOUDKIT_EXTERN NSString * const MHCloudKitErrorDomain;
 
+typedef NS_ENUM(NSInteger, MHCKErrorCode) {
+    MHCKErrorUnknown                = 1,  /* Unknown or generic error */
+    MHCKErrorInvalidArguments       = 12,  
+};
+
 NS_ASSUME_NONNULL_END
