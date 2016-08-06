@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable) CKDatabase *database;
 
+@property (nonatomic, copy, nullable) void (^subarrayBlock)(NSArray <__kindof id <CKRecordValue>> *values);
+
 /* This block will be called once for every record batch that is returned as a result of the query. */
 @property (nonatomic, copy, nullable) void (^recordsFetchedBlock)(NSArray <CKRecord *> * records);
 

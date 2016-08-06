@@ -26,7 +26,10 @@
 -(void)performAsyncOperation{
     for(int i = 0; i < self.values.count; i += MAX_VALUES_TO_QUERY) {
         NSArray *subarray = [self.values subarrayWithRange:NSMakeRange(i, MIN(MAX_VALUES_TO_QUERY, self.values.count - i))];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K IN %@", self.key, subarray];
+        if(self.subarrayBlock){
+            self.subarrayBlock(subarray);
+        }
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:(self.notIn ? @"NOT (%K IN %@)" : @"%K IN %@"), self.key, subarray];
         if(self.andSubpredicates){
             predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[self.andSubpredicates arrayByAddingObject:predicate]];
         }
