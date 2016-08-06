@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface MHCKInQueryOperation : MHFSerialQueueOperation
 
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithRecordType:(nullable NSString *)recordType key:(nullable NSString *)key values:(nullable NSArray <__kindof id <CKRecordValue>> *)values;
 
 @property (nonatomic, copy, nullable) NSString *recordType;
