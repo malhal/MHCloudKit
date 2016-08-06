@@ -13,6 +13,7 @@
 		EC07F24E1D4FDAFB00A28610 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */; };
 		EC07F2521D4FDC3800A28610 /* MHCKQueryRecordsOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */; };
 		EC07F2531D4FDC3800A28610 /* MHCKQueryRecordsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */; };
+		EC92EFDA1D564C47000DB848 /* MHFNamespaceDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EC92EFD91D564C47000DB848 /* MHFNamespaceDefines.h */; };
 		ECA3721B1D52C89400B9DA1B /* MHFQueueOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA372171D52C89400B9DA1B /* MHFQueueOperation.h */; };
 		ECA3721C1D52C89400B9DA1B /* MHFQueueOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */; };
 		ECA3721D1D52C89400B9DA1B /* MHFSerialQueueOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA372191D52C89400B9DA1B /* MHFSerialQueueOperation.h */; };
@@ -54,6 +55,7 @@
 		EC07F24D1D4FDAFB00A28610 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCKQueryRecordsOperation.h; sourceTree = "<group>"; };
 		EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCKQueryRecordsOperation.m; sourceTree = "<group>"; };
+		EC92EFD91D564C47000DB848 /* MHFNamespaceDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFNamespaceDefines.h; path = dependencies/MHFoundation/MHFoundation/MHFNamespaceDefines.h; sourceTree = "<group>"; };
 		ECA372171D52C89400B9DA1B /* MHFQueueOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFQueueOperation.h; path = dependencies/MHFoundation/MHFoundation/MHFQueueOperation.h; sourceTree = "<group>"; };
 		ECA372181D52C89400B9DA1B /* MHFQueueOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHFQueueOperation.m; path = dependencies/MHFoundation/MHFoundation/MHFQueueOperation.m; sourceTree = "<group>"; };
 		ECA372191D52C89400B9DA1B /* MHFSerialQueueOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHFSerialQueueOperation.h; path = dependencies/MHFoundation/MHFoundation/MHFSerialQueueOperation.h; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				EC07F1C51D4E541D00A28610 /* MHFDefines.h */,
+				EC92EFD91D564C47000DB848 /* MHFNamespaceDefines.h */,
 				EC07F1C11D4E53CE00A28610 /* MHFError.h */,
 				EC07F1C21D4E53CE00A28610 /* MHFError.m */,
 				ECD903281D442C8200D0E427 /* MHFAsyncOperation.h */,
@@ -166,6 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				ECFD7F851D442AA900449373 /* MHCloudKit.h */,
+				ECD903341D442EAE00D0E427 /* MHCKDefines.h */,
+				ECA372211D52CC9600B9DA1B /* MHCKNamespaceDefines.h */,
+				ECD903301D442E4F00D0E427 /* MHCKError.h */,
+				ECD903311D442E4F00D0E427 /* MHCKError.m */,
 				ECD9031A1D442B8B00D0E427 /* CKDatabase+MHCK.h */,
 				ECD9031B1D442B8B00D0E427 /* CKDatabase+MHCK.m */,
 				ECD9031C1D442B8B00D0E427 /* CKDatabaseOperation+MHCK.h */,
@@ -175,10 +182,6 @@
 				EC07F2501D4FDC3800A28610 /* MHCKQueryRecordsOperation.h */,
 				EC07F2511D4FDC3800A28610 /* MHCKQueryRecordsOperation.m */,
 				ECFD7F871D442AA900449373 /* Info.plist */,
-				ECD903301D442E4F00D0E427 /* MHCKError.h */,
-				ECD903311D442E4F00D0E427 /* MHCKError.m */,
-				ECD903341D442EAE00D0E427 /* MHCKDefines.h */,
-				ECA372211D52CC9600B9DA1B /* MHCKNamespaceDefines.h */,
 				ECD903481D4524BA00D0E427 /* CKRecordID+MHCK.h */,
 				ECD903491D4524BA00D0E427 /* CKRecordID+MHCK.m */,
 			);
@@ -204,6 +207,7 @@
 				ECD903321D442E4F00D0E427 /* MHCKError.h in Headers */,
 				ECD903221D442B8B00D0E427 /* CKDatabaseOperation+MHCK.h in Headers */,
 				EC07F1C31D4E53CE00A28610 /* MHFError.h in Headers */,
+				EC92EFDA1D564C47000DB848 /* MHFNamespaceDefines.h in Headers */,
 				ECD9032C1D442C8200D0E427 /* MHFAsyncOperation.h in Headers */,
 				ECA3721D1D52C89400B9DA1B /* MHFSerialQueueOperation.h in Headers */,
 				EC07F2521D4FDC3800A28610 /* MHCKQueryRecordsOperation.h in Headers */,
