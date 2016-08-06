@@ -62,7 +62,9 @@
             return;
         }
         
-        [self recordsFetched:queriedRecords];
+        if(queriedRecords.count){
+            [self recordsFetched:queriedRecords];
+        }
         
         // prepare for the next batch
         queriedRecords = [NSMutableArray array];
