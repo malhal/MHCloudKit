@@ -12,8 +12,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- With CloudKit there is a limit to the number of values that can appear in an IN query (about 130) so this class
- allows the query to be batched.
+ With CloudKit there is a limit to the number of values that can appear in an IN query (250 but gives internal server error between 193-250) so this class
+ allows the query to be batched by limiting it to 100.
+ "Limit Exceeded" (27/2023); server message = "Query filter exceeds the limit of values: 250 for container 'iCloud.com.malhal.MHCloudSyncDemo"
+ Internal server error on other numbers, see above when the IN query failed on 193 entries.
  */
 @interface MHCKInQueryOperation : MHFSerialQueueOperation
 
