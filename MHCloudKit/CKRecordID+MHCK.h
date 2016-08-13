@@ -7,6 +7,7 @@
 //
 
 #import <CloudKit/CloudKit.h>
+#import <MHCloudKit/MHCKDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

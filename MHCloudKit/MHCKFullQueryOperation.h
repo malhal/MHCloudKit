@@ -8,6 +8,7 @@
 //  Does multiple query cursor operations to get all the records.
 
 #import <CloudKit/CloudKit.h>
+#import <MHCloudKit/MHCKDefines.h>
 #import <MHFoundation/MHFSerialQueueOperation.h>
 
 NS_ASSUME_NONNULL_BEGIN
